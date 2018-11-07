@@ -1,0 +1,26 @@
+<template name="messages">
+  <div id="messages" class="row">
+    {{#each messages}}
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail" style="background-image: url({{image}});">
+        <!--{{#if image}}-->
+          <!--<div id="200" >-->
+
+          <!--</div>-->
+          <!--&lt;!&ndash;<img style="background-image: url({{image}});" alt="...">&ndash;&gt;-->
+          <!--{{/if}}-->
+          <div class="caption">
+            <h3>제목</h3>
+            <p>{{message}}</p>
+            <p>
+              <!--<a href="#" class="btn btn-primary" role="button" id="linkTwit">좋아요</a>-->
+              <a id="removeTwit" href="#" class="btn btn-danger" role="button">삭제</a>
+              <span style="float: right;"><button id="btnLike" class="btn btn-default btn-md"><i type="button" class="zmdi zmdi-thumb-up zmdi-hc-2x"></i></button>{{like}}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+
+</template>
